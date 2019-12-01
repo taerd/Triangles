@@ -16,7 +16,7 @@ namespace Triangles
             Y = y;
         }
 
-        internal static bool Compare(Point point1, Point point2, Point point3)
+        public static bool Compare(Point point1, Point point2, Point point3)//общий для всего класса
         {
             double a = point1.GetLength(point2);
             double b = point1.GetLength(point3);

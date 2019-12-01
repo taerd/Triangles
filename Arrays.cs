@@ -9,9 +9,9 @@ namespace Triangles
 {
     class Array
     {
-        public List<Point> points;
-        public List<Triangle> triangles;
-        int size;
+        private List<Point> points;
+        private List<Triangle> triangles;
+        private int size;
         public Array()
         {
         }

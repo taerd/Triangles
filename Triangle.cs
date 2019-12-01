@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Triangles
 {
-    class Triangle : IComparable<Triangle>
+    class Triangle : IComparable<Triangle>//наследуется от интерфейса конкретного типа
     {
-        public double perimetr;
+        private double perimetr;
         public double area;
         public Point Point1 { get; private set; }
         public Point Point2 { get; private set; }
@@ -26,30 +26,26 @@ namespace Triangles
         }
         public int CompareTo(Triangle other)//перегрузка list.sort()
         {
-            if (this != null && other != null)
+
+            if (area > other.area)
             {
-                if (area > other.area)
+                return 1;
+            }
+            else
+            {
+                if (area < other.area)
                 {
-                    return 1;
+                    return -1;
                 }
                 else
                 {
-                    if (area < other.area)
+                    if (perimetr == other.perimetr)
                     {
-                        return -1;
+                        return 0;
                     }
-                    else
-                    {
-                        if (perimetr == other.perimetr)
-                        {
-                            return 0;
-                        }
-                        else return perimetr < other.perimetr ? 1 : -1;
-                    }
+                    else return perimetr < other.perimetr ? 1 : -1;
                 }
-
             }
-            else throw new Exception("One of the triangles is null");
         }
     }
 }
