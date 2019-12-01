@@ -18,20 +18,16 @@ namespace Triangles
         public void CreatePoints(int n)
         {
             n = n < 3 ? 3 : n;
+
             points = new List<Point>();
             Random r = new Random();
             size = n;
-            //Point p = new Point(0, 0);
-            //points.Add(p);
+
             int k = 0;
-            int x;
-            int y;
             bool b;
             while (k < size)
             {
-                x = r.Next(-2 * size, 2 * size);
-                y = r.Next(-2 * size, 2 * size);
-                Point p1 = new Point(x, y);
+                Point p1 = new Point(r.Next(-2 * size, 2 * size), r.Next(-2 * size, 2 * size));
                 b = true;
 
                 for (int i = 0; i < k; i++)

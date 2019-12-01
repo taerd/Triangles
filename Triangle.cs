@@ -8,7 +8,7 @@ namespace Triangles
 {
     class Triangle : IComparable<Triangle>//наследуется от интерфейса конкретного типа
     {
-        private double perimetr;
+        public double perimetr;
         public double area;
         public Point Point1 { get; private set; }
         public Point Point2 { get; private set; }
